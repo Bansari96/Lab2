@@ -6,11 +6,17 @@ using System.Web.Mvc;
 
 namespace Lab2.Controllers
 {
-    public class CategorisController : Controller
+    public class CategoriesController : Controller
     {
         // GET: Categoris
         public ActionResult Index()
         {
+            return View();
+        }
+
+        public ActionResult Details(string CategoryName)
+        {
+            ViewBag.CategoryName = CategoryName;
             return View();
         }
 
